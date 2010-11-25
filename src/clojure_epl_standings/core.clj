@@ -44,4 +44,7 @@
    (map print-single-team-stats (map remove-first-cell-from-row rows))
    )
 
-(print-all-team-stats all-rows)
+;; main function
+(defn -main [& args]
+  (print-all-team-stats all-rows))
+  
