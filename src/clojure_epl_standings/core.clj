@@ -1,6 +1,5 @@
 (ns clojure-epl-standings.core
   (:require [clojure.contrib.str-utils2 :as str2])
-  (:require [clojure.contrib.json.read :as json])
   (:require [net.cgrand.enlive-html :as html])
   )
 
