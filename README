@@ -1,17 +1,9 @@
 # clojure-epl-standings
 
-FIXME: write description
-
-## Usage
-
-FIXME: write
-
-## Installation
-
-FIXME: write
+Scrapes current English Premier League Stadings from www.espnstar.com
 
 ## License
 
-Copyright (C) 2010 FIXME
+Copyright Punit Rathore (C) 2010
 
 Distributed under the Eclipse Public License, the same as Clojure.
