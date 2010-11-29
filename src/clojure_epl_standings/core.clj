@@ -44,7 +44,7 @@
 (defn print-single-team-stats [html]
   (let [content (:content (first html)) next-html (rest html)]
     (if (not (nil? content))
-      (print content " "))
+      (print (apply str content) " "))
     (if(nil? content)
       (newline)
       (recur (rest html)))))
@@ -56,14 +56,14 @@
 ;; first field is different than other fields, hence needs to be
 ;; printed out separately
 (defn print-first-header-field [html-content]
-  (print (:content html-content) " "))
+  (print (apply str (:content html-content)) " "))
 
 ;; rest of header fields whose styling is consistent
 (def rest-header-content (rest header-content))
 
 ;;prints content of one header field
 (defn print-header-field [html]
-(print (:content (first (:content (first html))))  " "))
+(print (apply str (:content (first (:content (first html)))))  " "))
 
 ;;prints all the contents of the header fields which have consistent styling
 (defn print-rest-of-header-fields [html]
@@ -75,7 +75,7 @@
 
 ;;printing all the stats for all teams
 (defn print-team-standings []
-  (print "(Position) ")
+  (print "Position ")
   (print-first-header-field (first header-content))
   (print-rest-of-header-fields rest-header-content)
   (print-all-team-stats all-rows))
